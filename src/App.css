@@ -1,0 +1,10 @@
+h1 {
+  color: #efefef;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 768px;
+}
