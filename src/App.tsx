@@ -4,9 +4,12 @@ import mole from "./assets/mole.png";
 import "./App.css";
 
 function App() {
+  // State to keep track of the score
   const [score, setScore] = useState(0);
+  // State to keep track of the images
   const [images, setImages] = useState<boolean[]>(new Array(9).fill(false));
 
+  // Check if the image clicked is a mole or not
   const checkClick = (bool: boolean, idx: number) => {
     if (bool) {
       setScore((prev) => prev + 1);
@@ -16,6 +19,7 @@ function App() {
     }
   };
 
+  // Set a random image to true every second
   useEffect(() => {
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * images.length);
